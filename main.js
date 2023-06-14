@@ -3,10 +3,14 @@ let secondButton = document.querySelector(".surprise2");
 let thirdButton = document.querySelector(".surprise3");
 let fourthButton = document.querySelector(".surprise4");
 let fifthButton = document.querySelector(".surprise5");
+let sixthButton = document.querySelector(".surprise6");
+let seventhButton = document.querySelector(".surprise7");
+let eighthButton = document.querySelector(".surprise8");
+let ninthButton = document.querySelector(".surprise9");
 let refreshButton = document.querySelector(".refresh");
 
 function turnsRed() {
-  fifthButton.classList.toggle("active");
+  ninthButton.classList.toggle("active");
 }
 
 function turnsGreen() {
@@ -33,6 +37,10 @@ function removeAllPink() {
   thirdButton.classList.toggle("delpink");
   fourthButton.classList.toggle("delpink");
   fifthButton.classList.toggle("delpink");
+  sixthButton.classList.toggle("delpink");
+  seventhButton.classList.toggle("delpink");
+  eighthButton.classList.toggle("delpink");
+  ninthButton.classList.toggle("delpink");
 }
 
 function dropping() {
