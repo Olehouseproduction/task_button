@@ -33,6 +33,7 @@ function removeAllPink() {
   one.classList.remove("active");
   four.classList.remove("active");
   background.classList.remove("active");
+  three.classList.remove("active");
 
   one.classList.toggle("delpink");
   two.classList.toggle("delpink");
@@ -49,16 +50,25 @@ function turnsPurple() {
   background.classList.toggle("active");
 }
 
+function turnsBlue() {
+  three.classList.toggle("active");
+}
+
 function dropping() {
   five.classList.remove("active");
   one.classList.remove("active");
   four.classList.remove("active");
   background.classList.remove("active");
+  three.classList.remove("active");
 
   one.classList.remove("delpink");
   two.classList.remove("delpink");
   three.classList.remove("delpink");
   four.classList.remove("delpink");
   five.classList.remove("delpink");
+  six.classList.remove("delpink");
+  seven.classList.remove("delpink");
+  eight.classList.remove("delpink");
+  nine.classList.remove("delpink");
   refreshButton.classList.remove("delpink");
 }
