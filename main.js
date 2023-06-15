@@ -54,6 +54,10 @@ function turnsBlue() {
   three.classList.toggle("active");
 }
 
+function invis() {
+  four.classList.toggle("invisible");
+}
+
 function dropping() {
   five.classList.remove("active");
   one.classList.remove("active");
@@ -70,5 +74,6 @@ function dropping() {
   seven.classList.remove("delpink");
   eight.classList.remove("delpink");
   nine.classList.remove("delpink");
+  four.classList.remove("invisible");
   refreshButton.classList.remove("delpink");
 }
