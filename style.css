@@ -46,3 +46,7 @@ body {
 .surprise.delpink {
   background-color: pink;
 }
+
+body.active {
+  background-color: purple;
+}

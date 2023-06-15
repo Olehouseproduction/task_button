@@ -1,57 +1,64 @@
-let firstButton = document.querySelector(".surprise1");
-let secondButton = document.querySelector(".surprise2");
-let thirdButton = document.querySelector(".surprise3");
-let fourthButton = document.querySelector(".surprise4");
-let fifthButton = document.querySelector(".surprise5");
-let sixthButton = document.querySelector(".surprise6");
-let seventhButton = document.querySelector(".surprise7");
-let eighthButton = document.querySelector(".surprise8");
-let ninthButton = document.querySelector(".surprise9");
+let one = document.querySelector(".surprise1");
+let two = document.querySelector(".surprise2");
+let three = document.querySelector(".surprise3");
+let four = document.querySelector(".surprise4");
+let five = document.querySelector(".surprise5");
+let background = document.querySelector("body");
+let six = document.querySelector(".surprise6");
+let seven = document.querySelector(".surprise7");
+let eight = document.querySelector(".surprise8");
+let nine = document.querySelector(".surprise9");
 let refreshButton = document.querySelector(".refresh");
 
 function turnsRed() {
-  ninthButton.classList.toggle("active");
+  nine.classList.toggle("active");
 }
 
 function turnsGreen() {
-  firstButton.classList.toggle("active");
-  fourthButton.classList.toggle("active");
+  one.classList.toggle("active");
+  four.classList.toggle("active");
 }
 
 function cancelSecond() {
-  firstButton.classList.remove("active");
-  fourthButton.classList.remove("active");
+  one.classList.remove("active");
+  four.classList.remove("active");
 }
 
 function canselFirst() {
-  fifthButton.classList.remove("active");
+  nine.classList.remove("active");
 }
 
 function removeAllPink() {
-  fifthButton.classList.remove("active");
-  firstButton.classList.remove("active");
-  fourthButton.classList.remove("active");
+  five.classList.remove("active");
+  one.classList.remove("active");
+  four.classList.remove("active");
+  background.classList.remove("active");
 
-  firstButton.classList.toggle("delpink");
-  secondButton.classList.toggle("delpink");
-  thirdButton.classList.toggle("delpink");
-  fourthButton.classList.toggle("delpink");
-  fifthButton.classList.toggle("delpink");
-  sixthButton.classList.toggle("delpink");
-  seventhButton.classList.toggle("delpink");
-  eighthButton.classList.toggle("delpink");
-  ninthButton.classList.toggle("delpink");
+  one.classList.toggle("delpink");
+  two.classList.toggle("delpink");
+  three.classList.toggle("delpink");
+  four.classList.toggle("delpink");
+  five.classList.toggle("delpink");
+  six.classList.toggle("delpink");
+  seven.classList.toggle("delpink");
+  eight.classList.toggle("delpink");
+  nine.classList.toggle("delpink");
+}
+
+function turnsPurple() {
+  background.classList.toggle("active");
 }
 
 function dropping() {
-  fifthButton.classList.remove("active");
-  firstButton.classList.remove("active");
-  fourthButton.classList.remove("active");
+  five.classList.remove("active");
+  one.classList.remove("active");
+  four.classList.remove("active");
+  background.classList.remove("active");
 
-  firstButton.classList.remove("delpink");
-  secondButton.classList.remove("delpink");
-  thirdButton.classList.remove("delpink");
-  fourthButton.classList.remove("delpink");
-  fifthButton.classList.remove("delpink");
+  one.classList.remove("delpink");
+  two.classList.remove("delpink");
+  three.classList.remove("delpink");
+  four.classList.remove("delpink");
+  five.classList.remove("delpink");
   refreshButton.classList.remove("delpink");
 }
