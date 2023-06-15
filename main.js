@@ -34,6 +34,7 @@ function removeAllPink() {
   four.classList.remove("active");
   background.classList.remove("active");
   three.classList.remove("active");
+  nine.classList.remove("pulse");
 
   one.classList.toggle("delpink");
   two.classList.toggle("delpink");
@@ -58,12 +59,18 @@ function invis() {
   four.classList.toggle("invisible");
 }
 
+function pulsation() {
+  nine.classList.toggle("pulse");
+}
+
 function dropping() {
   five.classList.remove("active");
   one.classList.remove("active");
   four.classList.remove("active");
   background.classList.remove("active");
   three.classList.remove("active");
+  nine.classList.remove("active");
+  nine.classList.remove("pulse");
 
   one.classList.remove("delpink");
   two.classList.remove("delpink");
@@ -75,5 +82,4 @@ function dropping() {
   eight.classList.remove("delpink");
   nine.classList.remove("delpink");
   four.classList.remove("invisible");
-  refreshButton.classList.remove("delpink");
 }
