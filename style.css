@@ -43,10 +43,15 @@ body {
 .surprise4.active {
   background-color: green;
 }
+
 .surprise.delpink {
   background-color: pink;
 }
 
 body.active {
   background-color: purple;
+}
+
+.surprise3.active {
+  background-color: blue;
 }
