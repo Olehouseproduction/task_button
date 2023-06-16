@@ -1,3 +1,15 @@
+buttonList = [
+  { one: 1 },
+  { two: 2 },
+  { three: 3 },
+  { four: 4 },
+  { five: 5 },
+  { six: 6 },
+  { seven: 7 },
+  { eight: 8 },
+  { nine: 9 },
+];
+
 let one = document.querySelector(".surprise1");
 let two = document.querySelector(".surprise2");
 let three = document.querySelector(".surprise3");
@@ -9,6 +21,10 @@ let seven = document.querySelector(".surprise7");
 let eight = document.querySelector(".surprise8");
 let nine = document.querySelector(".surprise9");
 let refreshButton = document.querySelector(".refresh");
+
+function random() {
+  let rand = Math.floor(Math.random() * buttonList.length);
+}
 
 function turnsRed() {
   nine.classList.toggle("active");
