@@ -1,43 +1,46 @@
-buttonList = [
-  { one: 1 },
-  { two: 2 },
-  { three: 3 },
-  { four: 4 },
-  { five: 5 },
-  { six: 6 },
-  { seven: 7 },
-  { eight: 8 },
-  { nine: 9 },
-];
+//Создаю массив из кнопок
+
+// buttonList = [
+//   { button1: "one" },
+//   { button2: "two" },
+//   { button3: "three" },
+//   { button4: "four" },
+//   { button5: "five" },
+//   { button6: "six" },
+//   { button7: "seven" },
+//   { button8: "eight" },
+//   { button9: "nine" },
+// ];
 
 let one = document.querySelector(".surprise1");
 let two = document.querySelector(".surprise2");
 let three = document.querySelector(".surprise3");
 let four = document.querySelector(".surprise4");
 let five = document.querySelector(".surprise5");
-let background = document.querySelector("body");
 let six = document.querySelector(".surprise6");
 let seven = document.querySelector(".surprise7");
 let eight = document.querySelector(".surprise8");
 let nine = document.querySelector(".surprise9");
 let refreshButton = document.querySelector(".refresh");
+let background = document.querySelector("body");
 
-function random() {
-  let rand = Math.floor(Math.random() * buttonList.length);
-}
+/*Несмотря на то, что NodeList не является массивом ( Array ), его вполне возможно перебрать при помощи метода forEach(). NodeList также можно конвертировать в Array при помощи Array.from()*/
 
 function turnsRed() {
   nine.classList.toggle("active");
+  // nine.classList.toggle("delpink");
 }
 
 function turnsGreen() {
-  one.classList.toggle("active");
-  four.classList.toggle("active");
+  one.classList.toggle("green");
+  four.classList.toggle("green");
+  one.classList.remove("delpink");
+  four.classList.remove("delpink");
 }
 
 function cancelSecond() {
-  one.classList.remove("active");
-  four.classList.remove("active");
+  one.classList.remove("green");
+  four.classList.remove("green");
 }
 
 function canselFirst() {
@@ -45,12 +48,7 @@ function canselFirst() {
 }
 
 function removeAllPink() {
-  five.classList.remove("active");
-  one.classList.remove("active");
-  four.classList.remove("active");
-  background.classList.remove("active");
-  three.classList.remove("active");
-  nine.classList.remove("pulse");
+  dropping();
 
   one.classList.toggle("delpink");
   two.classList.toggle("delpink");
@@ -67,8 +65,18 @@ function turnsPurple() {
   background.classList.toggle("active");
 }
 
+function random() {
+  elementList = document.querySelectorAll(".surprise");
+  let rand = Math.floor(Math.random() * elementList.length);
+  // elementList[rand];
+  return elementList[rand];
+  // elementList.splice(rand, 1);
+}
+console.log(elementList[rand]);
+
 function turnsBlue() {
-  three.classList.toggle("active");
+  let randomButton = random();
+  randomButton.classList.toggle("blue");
 }
 
 function invis() {
@@ -76,13 +84,15 @@ function invis() {
 }
 
 function pulsation() {
+  random();
   nine.classList.toggle("pulse");
 }
 
 function dropping() {
+  document.querySelectorAll(".surprise");
   five.classList.remove("active");
-  one.classList.remove("active");
-  four.classList.remove("active");
+  one.classList.remove("green");
+  four.classList.remove("green");
   background.classList.remove("active");
   three.classList.remove("active");
   nine.classList.remove("active");
