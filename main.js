@@ -66,9 +66,8 @@ function turnsPurple() {
 }
 
 function random() {
-  elementList = document.querySelectorAll(".surprise");
+  elementList = document.querySelectorAll(".only");
   let rand = Math.floor(Math.random() * elementList.length);
-  // elementList[rand];
   return elementList[rand];
   // elementList.splice(rand, 1);
 }
@@ -77,6 +76,16 @@ console.log(elementList[rand]);
 function turnsBlue() {
   let randomButton = random();
   randomButton.classList.toggle("blue");
+  console.log(randomButton);
+  one.classList.remove("delpink");
+  two.classList.remove("delpink");
+  three.classList.remove("delpink");
+  four.classList.remove("delpink");
+  five.classList.remove("delpink");
+  six.classList.remove("delpink");
+  seven.classList.remove("delpink");
+  eight.classList.remove("delpink");
+  nine.classList.remove("delpink");
 }
 
 function invis() {
@@ -84,12 +93,13 @@ function invis() {
 }
 
 function pulsation() {
-  random();
-  nine.classList.toggle("pulse");
+  let randomButton = random();
+  randomButton.classList.toggle("pulse");
 }
 
 function dropping() {
-  document.querySelectorAll(".surprise");
+  let randomButton = random();
+
   five.classList.remove("active");
   one.classList.remove("green");
   four.classList.remove("green");
@@ -97,6 +107,30 @@ function dropping() {
   three.classList.remove("active");
   nine.classList.remove("active");
   nine.classList.remove("pulse");
+  // console.log(randomButton);
+  randomButton.classList.remove("blue");
+  randomButton.classList.remove("pulse");
+  one.classList.remove("blue");
+  two.classList.remove("blue");
+  three.classList.remove("blue");
+  four.classList.remove("blue");
+  five.classList.remove("blue");
+  six.classList.remove("blue");
+  seven.classList.remove("blue");
+  eight.classList.remove("blue");
+  nine.classList.remove("blue");
+  refreshButton.classList.remove("blue");
+
+  one.classList.remove("pulse");
+  two.classList.remove("pulse");
+  three.classList.remove("pulse");
+  four.classList.remove("pulse");
+  five.classList.remove("pulse");
+  six.classList.remove("pulse");
+  seven.classList.remove("pulse");
+  eight.classList.remove("pulse");
+  nine.classList.remove("pulse");
+  refreshButton.classList.remove("pulse");
 
   one.classList.remove("delpink");
   two.classList.remove("delpink");
