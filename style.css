@@ -48,11 +48,7 @@ body.active {
   background-color: purple;
 }
 
-/* .surprise3.active {
-  background-color: blue;
-} */
-
-.rand.blue {
+.blue {
   background-color: blue;
 }
 
@@ -71,6 +67,7 @@ body.active {
   transition: all 350ms ease-in;
   cursor: pointer;
 }
+
 .pulse::after,
 .pulse::before {
   content: "";
@@ -86,7 +83,7 @@ body.active {
 }
 
 .pulse::after {
-  animation-delay: 1.25s;
+  animation-delay: 1.25ms;
 }
 
 @keyframes pulse {
