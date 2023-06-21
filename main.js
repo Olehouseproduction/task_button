@@ -28,6 +28,8 @@ let background = document.querySelector("body");
 
 function turnsRed() {
   nine.classList.toggle("active");
+  nine.classList.remove("delpink");
+
   // nine.classList.toggle("delpink");
 }
 
