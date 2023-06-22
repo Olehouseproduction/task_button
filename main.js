@@ -1,17 +1,3 @@
-//Создаю массив из кнопок
-
-// buttonList = [
-//   { button1: "one" },
-//   { button2: "two" },
-//   { button3: "three" },
-//   { button4: "four" },
-//   { button5: "five" },
-//   { button6: "six" },
-//   { button7: "seven" },
-//   { button8: "eight" },
-//   { button9: "nine" },
-// ];
-
 let one = document.querySelector(".surprise1");
 let two = document.querySelector(".surprise2");
 let three = document.querySelector(".surprise3");
@@ -23,19 +9,17 @@ let eight = document.querySelector(".surprise8");
 let nine = document.querySelector(".surprise9");
 let refreshButton = document.querySelector(".refresh");
 let background = document.querySelector("body");
-
-/*Несмотря на то, что NodeList не является массивом ( Array ), его вполне возможно перебрать при помощи метода forEach(). NodeList также можно конвертировать в Array при помощи Array.from()*/
+let ten = document.querySelector(".surprise10");
 
 function turnsRed() {
   nine.classList.add("active");
   nine.classList.remove("delpink");
-
-  // nine.classList.toggle("delpink");
 }
 
 function turnsGreen() {
-  one.classList.toggle("green");
-  four.classList.toggle("green");
+  one.classList.add("green");
+  four.classList.add("green");
+
   one.classList.remove("delpink");
   four.classList.remove("delpink");
 }
@@ -52,100 +36,36 @@ function canselFirst() {
 function removeAllPink() {
   dropping();
 
-  one.classList.toggle("delpink");
-  two.classList.toggle("delpink");
-  three.classList.toggle("delpink");
-  four.classList.toggle("delpink");
-  five.classList.toggle("delpink");
-  six.classList.toggle("delpink");
-  seven.classList.toggle("delpink");
-  eight.classList.toggle("delpink");
-  nine.classList.toggle("delpink");
+  one.classList.add("delpink");
+  two.classList.add("delpink");
+  three.classList.add("delpink");
+  four.classList.add("delpink");
+  five.classList.add("delpink");
+  six.classList.add("delpink");
+  seven.classList.add("delpink");
+  eight.classList.add("delpink");
+  nine.classList.add("delpink");
+  ten.classList.add("delpink");
 }
 
 function turnsPurple() {
-  background.classList.toggle("active");
+  background.classList.add("active");
+  background.classList.remove("active2");
 }
 
-function random() {
-  elementList = document.querySelectorAll(".only");
+function random(selector) {
+  elementList = document.querySelectorAll(selector);
   let rand = Math.floor(Math.random() * elementList.length);
-
   console.log(elementList[rand]);
   return elementList[rand];
-  // elementList.splice(rand, 1);
 }
 
 function turnsBlue() {
-  let randomButton = random();
-  randomButton.classList.toggle("blue");
-  console.log(randomButton);
-  one.classList.remove("delpink");
-  two.classList.remove("delpink");
-  three.classList.remove("delpink");
-  four.classList.remove("delpink");
-  five.classList.remove("delpink");
-  six.classList.remove("delpink");
-  seven.classList.remove("delpink");
-  eight.classList.remove("delpink");
-  nine.classList.remove("delpink");
-}
-
-function invis() {
-  four.classList.toggle("invisible");
-}
-
-function pulsation() {
-  let randomButton = random();
-  randomButton.classList.toggle("pulse");
-}
-
-function dropping() {
-  let i = 0
-  let allButton = document.querySelectorAll(".surprise")
-  allButton.forEach((item)=>{
-    console.log(item, "каждый елемент ", i++)
-    item.classList.remove("active")
-    item.classList.remove("green")
-    item.classList.remove("blue")
-    item.classList.remove("pulse")
-    item.classList.remove("delpink")
-  })
-
-  // let randomButton = random();
-
-  // five.classList.remove("active");
-  // one.classList.remove("green");
-  // four.classList.remove("green");
-  // background.classList.remove("active");
-  // three.classList.remove("active");
-  // nine.classList.remove("active");
-  // nine.classList.remove("pulse");
-  // // console.log(randomButton);
-  // randomButton.classList.remove("blue");
-  // randomButton.classList.remove("pulse");
-  // one.classList.remove("blue");
-  // two.classList.remove("blue");
-  // three.classList.remove("blue");
-  // four.classList.remove("blue");
-  // five.classList.remove("blue");
-  // six.classList.remove("blue");
-  // seven.classList.remove("blue");
-  // eight.classList.remove("blue");
-  // nine.classList.remove("blue");
-  // refreshButton.classList.remove("blue");
-
-  // one.classList.remove("pulse");
-  // two.classList.remove("pulse");
-  // three.classList.remove("pulse");
-  // four.classList.remove("pulse");
-  // five.classList.remove("pulse");
-  // six.classList.remove("pulse");
-  // seven.classList.remove("pulse");
-  // eight.classList.remove("pulse");
-  // nine.classList.remove("pulse");
-  // refreshButton.classList.remove("pulse");
-
+  let randomButton = random(".only:not(.blue)");
+  randomButton.classList.add("blue");
+  // if (randomButton.classList.delpink) {
+  // }
+  //Если мs кликаем на объект и на нем висит класс .delpink, то мы его снимаем и меняем на .blue
   // one.classList.remove("delpink");
   // two.classList.remove("delpink");
   // three.classList.remove("delpink");
@@ -155,5 +75,89 @@ function dropping() {
   // seven.classList.remove("delpink");
   // eight.classList.remove("delpink");
   // nine.classList.remove("delpink");
-  // four.classList.remove("invisible");
+  // ten.classList.remove("delpink");
+  // nine.classList.remove("active");
 }
+
+// function pink() {
+//   let allP = document.querySelectorAll(".surprise");
+//   allP.forEach((item) => {
+//     item.classList.remove("delpink");
+//   });
+// }
+
+function invis() {
+  let randomButton = random(".only:not(.invisible)");
+  randomButton.classList.add("invisible");
+}
+
+function pulsation() {
+  let randomButton = random(".only:not(.pulse)");
+  randomButton.classList.add("pulse");
+}
+
+function ripple() {
+  ten.classList.toggle("active");
+}
+
+function dropping() {
+  let i = 0;
+  let allButton = document.querySelectorAll(".surprise");
+  allButton.forEach((item) => {
+    console.log(item, "каждый элемент", i++);
+    item.classList.remove("active");
+    item.classList.remove("green");
+    item.classList.remove("blue");
+    item.classList.remove("pulse");
+    item.classList.remove("delpink");
+    item.classList.remove("active");
+    item.classList.remove("invisible");
+  });
+  background.classList.remove("active");
+  background.classList.add("active2");
+}
+
+/*Несмотря на то, что NodeList не является массивом ( Array ), его вполне возможно перебрать при помощи метода forEach(). NodeList также можно конвертировать в Array при помощи Array.from()*/
+
+// five.classList.remove("active");
+// one.classList.remove("green");
+// four.classList.remove("green");
+// background.classList.remove("active");
+// three.classList.remove("active");
+// nine.classList.remove("active");
+// nine.classList.remove("pulse");
+// // console.log(randomButton);
+// randomButton.classList.remove("blue");
+// randomButton.classList.remove("pulse");
+// one.classList.remove("blue");
+// two.classList.remove("blue");
+// three.classList.remove("blue");
+// four.classList.remove("blue");
+// five.classList.remove("blue");
+// six.classList.remove("blue");
+// seven.classList.remove("blue");
+// eight.classList.remove("blue");
+// nine.classList.remove("blue");
+// refreshButton.classList.remove("blue");
+
+// one.classList.remove("pulse");
+// two.classList.remove("pulse");
+// three.classList.remove("pulse");
+// four.classList.remove("pulse");
+// five.classList.remove("pulse");
+// six.classList.remove("pulse");
+// seven.classList.remove("pulse");
+// eight.classList.remove("pulse");
+// nine.classList.remove("pulse");
+// refreshButton.classList.remove("pulse");
+
+// one.classList.remove("delpink");
+// two.classList.remove("delpink");
+// three.classList.remove("delpink");
+// four.classList.remove("delpink");
+// five.classList.remove("delpink");
+// six.classList.remove("delpink");
+// seven.classList.remove("delpink");
+// eight.classList.remove("delpink");
+// nine.classList.remove("delpink");
+// four.classList.remove("invisible");
