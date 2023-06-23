@@ -63,28 +63,10 @@ function random(selector) {
 function turnsBlue() {
   let randomButton = random(".only:not(.blue)");
   randomButton.classList.add("blue");
-  // if (randomButton.classList.delpink) {
-  // }
-  //Если мs кликаем на объект и на нем висит класс .delpink, то мы его снимаем и меняем на .blue
-  // one.classList.remove("delpink");
-  // two.classList.remove("delpink");
-  // three.classList.remove("delpink");
-  // four.classList.remove("delpink");
-  // five.classList.remove("delpink");
-  // six.classList.remove("delpink");
-  // seven.classList.remove("delpink");
-  // eight.classList.remove("delpink");
-  // nine.classList.remove("delpink");
-  // ten.classList.remove("delpink");
-  // nine.classList.remove("active");
+  randomButton.classList.remove("delpink");
+  randomButton.classList.remove("active");
+  randomButton.classList.remove("pulse");
 }
-
-// function pink() {
-//   let allP = document.querySelectorAll(".surprise");
-//   allP.forEach((item) => {
-//     item.classList.remove("delpink");
-//   });
-// }
 
 function invis() {
   let randomButton = random(".only:not(.invisible)");
@@ -116,48 +98,3 @@ function dropping() {
   background.classList.remove("active");
   background.classList.add("active2");
 }
-
-/*Несмотря на то, что NodeList не является массивом ( Array ), его вполне возможно перебрать при помощи метода forEach(). NodeList также можно конвертировать в Array при помощи Array.from()*/
-
-// five.classList.remove("active");
-// one.classList.remove("green");
-// four.classList.remove("green");
-// background.classList.remove("active");
-// three.classList.remove("active");
-// nine.classList.remove("active");
-// nine.classList.remove("pulse");
-// // console.log(randomButton);
-// randomButton.classList.remove("blue");
-// randomButton.classList.remove("pulse");
-// one.classList.remove("blue");
-// two.classList.remove("blue");
-// three.classList.remove("blue");
-// four.classList.remove("blue");
-// five.classList.remove("blue");
-// six.classList.remove("blue");
-// seven.classList.remove("blue");
-// eight.classList.remove("blue");
-// nine.classList.remove("blue");
-// refreshButton.classList.remove("blue");
-
-// one.classList.remove("pulse");
-// two.classList.remove("pulse");
-// three.classList.remove("pulse");
-// four.classList.remove("pulse");
-// five.classList.remove("pulse");
-// six.classList.remove("pulse");
-// seven.classList.remove("pulse");
-// eight.classList.remove("pulse");
-// nine.classList.remove("pulse");
-// refreshButton.classList.remove("pulse");
-
-// one.classList.remove("delpink");
-// two.classList.remove("delpink");
-// three.classList.remove("delpink");
-// four.classList.remove("delpink");
-// five.classList.remove("delpink");
-// six.classList.remove("delpink");
-// seven.classList.remove("delpink");
-// eight.classList.remove("delpink");
-// nine.classList.remove("delpink");
-// four.classList.remove("invisible");
