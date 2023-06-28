@@ -9,8 +9,6 @@ let eight = document.querySelector(".surprise8");
 let nine = document.querySelector(".surprise9");
 let refreshButton = document.querySelector(".refresh");
 let background = document.querySelector("body");
-let ten = document.querySelector(".surprise10");
-
 function turnsRed() {
   nine.classList.add("active");
   nine.classList.remove("delpink");
@@ -19,7 +17,6 @@ function turnsRed() {
 function turnsGreen() {
   one.classList.add("green");
   four.classList.add("green");
-
   one.classList.remove("delpink");
   four.classList.remove("delpink");
 }
@@ -45,7 +42,6 @@ function removeAllPink() {
   seven.classList.add("delpink");
   eight.classList.add("delpink");
   nine.classList.add("delpink");
-  ten.classList.add("delpink");
 }
 
 function turnsPurple() {
@@ -76,10 +72,6 @@ function invis() {
 function pulsation() {
   let randomButton = random(".only:not(.pulse)");
   randomButton.classList.add("pulse");
-}
-
-function ripple() {
-  ten.classList.toggle("active");
 }
 
 function dropping() {
