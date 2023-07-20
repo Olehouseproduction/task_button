@@ -1,49 +1,92 @@
-let firstButton = document.querySelector(".surprise1");
-let secondButton = document.querySelector(".surprise2");
-let thirdButton = document.querySelector(".surprise3");
-let fourthButton = document.querySelector(".surprise4");
-let fifthButton = document.querySelector(".surprise5");
+let one = document.querySelector(".surprise1");
+let two = document.querySelector(".surprise2");
+let three = document.querySelector(".surprise3");
+let four = document.querySelector(".surprise4");
+let five = document.querySelector(".surprise5");
+let six = document.querySelector(".surprise6");
+let seven = document.querySelector(".surprise7");
+let eight = document.querySelector(".surprise8");
+let nine = document.querySelector(".surprise9");
 let refreshButton = document.querySelector(".refresh");
-
+let background = document.querySelector("body");
 function turnsRed() {
-  fifthButton.classList.toggle("active");
+  nine.classList.add("active");
+  nine.classList.remove("delpink");
 }
 
 function turnsGreen() {
-  firstButton.classList.toggle("active");
-  fourthButton.classList.toggle("active");
+  one.classList.add("green");
+  four.classList.add("green");
+  one.classList.remove("delpink");
+  four.classList.remove("delpink");
 }
 
 function cancelSecond() {
-  firstButton.classList.remove("active");
-  fourthButton.classList.remove("active");
+  one.classList.remove("green");
+  four.classList.remove("green");
 }
 
 function canselFirst() {
-  fifthButton.classList.remove("active");
+  nine.classList.remove("active");
 }
 
 function removeAllPink() {
-  fifthButton.classList.remove("active");
-  firstButton.classList.remove("active");
-  fourthButton.classList.remove("active");
+  dropping();
 
-  firstButton.classList.toggle("delpink");
-  secondButton.classList.toggle("delpink");
-  thirdButton.classList.toggle("delpink");
-  fourthButton.classList.toggle("delpink");
-  fifthButton.classList.toggle("delpink");
+  one.classList.add("delpink");
+  two.classList.add("delpink");
+  three.classList.add("delpink");
+  four.classList.add("delpink");
+  five.classList.add("delpink");
+  six.classList.add("delpink");
+  seven.classList.add("delpink");
+  eight.classList.add("delpink");
+  nine.classList.add("delpink");
+}
+
+function turnsPurple() {
+  background.classList.add("active");
+  background.classList.remove("active2");
+}
+
+function random(selector) {
+  elementList = document.querySelectorAll(selector);
+  let rand = Math.floor(Math.random() * elementList.length);
+  console.log(elementList[rand]);
+  return elementList[rand];
+}
+
+function turnsBlue() {
+  let randomButton = random(".only:not(.blue)");
+  randomButton.classList.add("blue");
+  randomButton.classList.remove("delpink");
+  randomButton.classList.remove("active");
+  randomButton.classList.remove("pulse");
+}
+
+function invis() {
+  let randomButton = random(".only:not(.invisible)");
+  randomButton.classList.add("invisible");
+}
+
+function pulsation() {
+  let randomButton = random(".only:not(.pulse)");
+  randomButton.classList.add("pulse");
 }
 
 function dropping() {
-  fifthButton.classList.remove("active");
-  firstButton.classList.remove("active");
-  fourthButton.classList.remove("active");
-
-  firstButton.classList.remove("delpink");
-  secondButton.classList.remove("delpink");
-  thirdButton.classList.remove("delpink");
-  fourthButton.classList.remove("delpink");
-  fifthButton.classList.remove("delpink");
-  refreshButton.classList.remove("delpink");
+  let i = 0;
+  let allButton = document.querySelectorAll(".surprise");
+  allButton.forEach((item) => {
+    console.log(item, "каждый элемент", i++);
+    item.classList.remove("active");
+    item.classList.remove("green");
+    item.classList.remove("blue");
+    item.classList.remove("pulse");
+    item.classList.remove("delpink");
+    item.classList.remove("active");
+    item.classList.remove("invisible");
+  });
+  background.classList.remove("active");
+  background.classList.add("active2");
 }

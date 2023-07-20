@@ -10,22 +10,40 @@
   <body>
     <div class="main">
       <button onclick="dropping()" class="surprise refresh">Сброс</button>
-      <button onclick="turnsRed()" class="surprise surprise1">
-        Последний становится красным
+      <button onclick="turnsRed()" class="surprise surprise1 only">
+        1<br />Последний становится красным
       </button>
-      <button onclick="turnsGreen()" class="surprise surprise2 new">
-        Первый и четвертый становятся зелеными
+      <button onclick="turnsGreen()" class="surprise surprise2 only">
+        2<br />Первый и четвертый становятся зелеными
       </button>
-      <button onclick="cancelSecond()" class="surprise surprise3">
-        Отменяет действия второго
+      <button onclick="cancelSecond()" class="surprise surprise3 only">
+        3<br />Отменяет действия второго
       </button>
-      <button onclick="canselFirst()" class="surprise surprise4">
-        Отменяет действие первого
+      <button onclick="canselFirst()" class="surprise surprise4 only">
+        4<br />Отменяет действие первого
       </button>
-      <button onclick="removeAllPink()" class="surprise surprise5">
+      <button onclick="removeAllPink()" class="surprise surprise5 only">
+        5<br />
         Отменяет все и красит всех в розовый
       </button>
+      <button onclick="turnsPurple()" class="surprise surprise6 only">
+        6<br />Делает задник пурпурным
+      </button>
+      <!-- НЕОГРАНИЧЕННОЕ ЧИСЛО РАЗ -->
+      <button onclick="turnsBlue()" class="surprise surprise7 only">
+        7<br />Делает рандомную кнопку синей
+      </button>
+      <!-- НЕОГРАНИЧЕННОЕ ЧИСЛО РАЗ -->
+      <button onclick="pulsation()" class="surprise surprise8 only">
+        8<br />Добавляет анимации пульсации рандомной кнопке
+      </button>
+      <!-- НЕОГРАНИЧЕННОЕ ЧИСЛО РАЗ -->
+      <button onclick="invis()" class="surprise surprise9 only">
+        9<br />Делает невидимой рандомную кнопку
+      </button>
     </div>
+
+    <!-- Смотри изменения в другой ветке newTask -->
     <script src="main.js"></script>
   </body>
 </html>
